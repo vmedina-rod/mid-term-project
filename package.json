@@ -1,0 +1,34 @@
+{
+  "name": "mid-term-project",
+  "version": "1.0.0",
+  "description": "Ironhack Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmedina-rod/mid-term-project.git"
+  },
+  "keywords": [
+    "Mid",
+    "term",
+    "project",
+    "ironhack"
+  ],
+  "author": "Vicente Medina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmedina-rod/mid-term-project/issues"
+  },
+  "homepage": "https://github.com/vmedina-rod/mid-term-project#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
