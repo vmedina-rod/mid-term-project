@@ -2,8 +2,12 @@
 
 var uglify = require("gulp-uglify");
 
+//const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
+
+
 var gulp = require("gulp"),
-  sass = require("gulp-sass"),
+
   sourcemaps = require("gulp-sourcemaps"),
   concat = require("gulp-concat"),
   cleanCSS = require("gulp-clean-css"),
