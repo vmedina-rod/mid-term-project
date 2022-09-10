@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   sr.reveal(`._1, ._2`, { origin: "left" });
   sr.reveal(`._3, ._4`, { origin: "right" });
 
+  //Project Pages
+  sr.reveal(`.heading, project-type-wrapper`);
+
   const SUBSCRIBE_API_BASE_URL = "https://database.deta.sh/v1/a0wwnrex/contactmessages/items";
   const X_API_KEY = "a0wwnrex_JeRhBybn5iFYziStv9d2M6Mchd2b4B4H";
 

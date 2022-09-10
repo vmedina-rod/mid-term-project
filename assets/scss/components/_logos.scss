@@ -21,3 +21,21 @@
     }
   }
 }
+
+.client {
+  @include display-flex;
+
+  &__logo {
+    @include display-flex;
+    width: 150px;
+    height: 96px;
+    @include jc-flex-center;
+    @include ai-flex-center;
+
+    &.amazon {
+      @include respond-max($md) {
+        display: none;
+      }
+    }
+  }
+}
