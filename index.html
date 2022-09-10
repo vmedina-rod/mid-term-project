@@ -1,33 +1,257 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Circle | Ironhack - Mid term project</title>
-    <meta name="description" content="A project for Ironhack">
-    <meta name="author" content="Vicente Medina">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Circle | Ironhack - Mid term project</title>
+  <meta name="description" content="A project for Ironhack" />
+  <meta name="author" content="Vicente Medina" />
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
 
-    <link rel="stylesheet" href="/assests/css/styles.css?v=1.0">
-    <script src="/assets/js/index.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Menu item</li>
-          <li>Menu item</li>
-          <li>Menu item</li>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo"></a>
+        <nav role="navigation" class="nav-menu">
+          <a href="#" class="nav__link current nav-link">Home</a>
+          <a href="#projects" class="nav__link nav-link">Projects</a>
+          <a href="#services" class="nav__link nav-link">Services</a>
+        </nav>
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+
+        <ul class="menu">
+          <a href="#" class="nav__link current nav-link">Home</a>
+          <a href="#projects" class="nav__link nav-link">Projects</a>
+          <a href="#services" class="nav__link nav-link">Services</a>
+          <a href="contact-us" class="nav__link nav-link">Contact us</a>
         </ul>
-      </nav>
-    </header>
-    </section>
-    <footer>
-    </footer>
-  </body>
+
+        <a href="contact-us" class="primary-button button">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="section hero">
+    <div class="container hero">
+      <div class="hero__content">
+        <h1 class="hero__heading">
+          Empower Your Business With Stunning Design!
+        </h1>
+        <div class="hero__description">
+          Circle is a digital design and development studio. We design and
+          develop astonishing websites and mobile apps.
+        </div>
+        <div class="hero__buttons">
+          <a title="Click me" href="contact-us" class="primary-button hero button">Get in touch</a>
+          <a href="#projects" class="hero__textbutton">See our work</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img class="hero__image__main" src="assets/images/hero-section/hero-image.png" width="570"
+          alt="The image of the developer" loading="lazy" />
+        <img class="hero__card-1" src="assets/images/hero-section/card-1.png" width="324" alt="card 1" loading="lazy" />
+        <img class="hero__card-2" src="assets/images/hero-section/card-2.png" width="328" alt="card 2" loading="lazy" />
+      </div>
+    </div>
+  </div>
+
+  <section class="section logos">
+    <div class="container logos">
+      <div class="grid__logos">
+        <div class="client__logo">
+          <img src="assets/images/logos/airbnb-logo.svg" loading="lazy" alt="Airbnb logo" class="logo" />
+        </div>
+        <div class="client__logo">
+          <img src="assets/images/logos/google-logo.svg" loading="lazy" alt="Google logo" class="logo" />
+        </div>
+        <div class="client__logo">
+          <img src="assets/images/logos/microsoft-logo.svg" loading="lazy" alt="Microsoft logo" class="logo" />
+        </div>
+        <div class="client__logo">
+          <img src="assets/images/logos/fedex-logo.svg" loading="lazy" alt="FedEx logo" class="logo" />
+        </div>
+        <div class="client__logo amazon">
+          <img src="assets/images/logos/amazon-logo.svg" loading="lazy" alt="Amazon logo" class="logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container projects">
+      <h2 class="projects__heading">Recent Projects</h2>
+      <div class="collection-list-wrapper">
+        <div role="list" class="collection-list">
+
+          <div class="project__card">
+            <div class="project__image">
+              <img src="./assets/images/projects-section/1.jpg" loading="lazy" alt="The image of Simplify project."
+                class="project__card_image" />
+            </div>
+            <div class="project__content">
+              <div class="project__text">
+                <div class="project__title">Simplify</div>
+                <div class="project__description">
+                  UI Design &amp; App Development
+                </div>
+              </div>
+              <a href="projects/simplify" class="link-button">Learn more</a>
+            </div>
+          </div>
+
+          <div class="project__card">
+            <div class="project__image">
+              <img src="./assets/images/projects-section/2.jpg" loading="lazy" alt="The image of Simplify project."
+                class="project__card_image" />
+            </div>
+            <div class="project__content">
+              <div class="project__text">
+                <div class="project__title">Dashcoin</div>
+                <div class="project__description">Web Development</div>
+              </div>
+              <a href="#" class="link-button">Learn more</a>
+            </div>
+          </div>
+
+          <div class="project__card">
+            <div class="project__image">
+              <img src="./assets/images/projects-section/3.jpg" loading="lazy" alt="The image of Simplify project."
+                class="project__card_image" />
+            </div>
+            <div class="project__content">
+              <div class="project__text">
+                <div class="project__title">Vectorify</div>
+                <div class="project__description">User Experience Design</div>
+              </div>
+              <a href="#" class="link-button">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonial">
+    <div class="container testimonial">
+      <h3 class="testimonial__heading">Hear What Our Clients Have to Say</h3>
+      <div class="testimonial__text">
+        “Circle helped us through every stage of our startup. We really
+        enjoyed working with you.”
+      </div>
+      <div class="client">
+        <div class="client__profile"></div>
+        <div class="client__info">
+          <div class="client__info__name">Kristin Watson</div>
+          <div class="client__info__company">Booking.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="memoji _1"></div>
+    <div class="memoji _2"></div>
+    <div class="memoji _3"></div>
+    <div class="memoji _4"></div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container services">
+      <h1 class="projects__heading">Our Services</h1>
+      <div class="services__grid">
+        <div class="service__card">
+          <div class="service__icon"></div>
+          <div class="service__content">
+            <div class="service__text">
+              <div class="service__title">User Interface Design</div>
+              <div class="service__description">
+                Circle provides you with a stunning user interface design that
+                is accessible to everyone.
+              </div>
+            </div>
+            <a href="#" class="link-button">Learn more</a>
+          </div>
+        </div>
+        <div class="service__card">
+          <div class="service__icon _2"></div>
+          <div class="service__content">
+            <div class="service__text">
+              <div class="service__title">User Experience Design</div>
+              <div class="service__description">
+                Circle always focuses on delivering the best user experience
+                to your customers.
+              </div>
+            </div>
+            <a href="#" class="link-button">Learn more</a>
+          </div>
+        </div>
+        <div class="service__card">
+          <div class="service__icon _3"></div>
+          <div class="service__content">
+            <div class="service__text">
+              <div class="service__title">Application Development</div>
+              <div class="service__description">
+                We develop high-quality mobile and web applications using the
+                latest technology stack.
+              </div>
+            </div>
+            <a href="#" class="link-button">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div>
+      <h3>Do you have any questions?</h3>
+    </div>
+    <p class="text-regular main-grey">Let us help you!</p>
+    <form class="cta-section__mail">
+      <input class="cta-section__mail-input error" type="email" placeholder="Enter your email" required />
+      <button class="cta-section__subscribe-button" type="submit">
+        Subscribe
+      </button>
+    </form>
+    <div class="submitted-message">
+      Thank you! Your submission has been received!
+    </div>
+  </section>
+
+  <footer>
+    <div class="section footer">
+      <div class="container footer">
+        <div class="footer__content">
+          <div class="footer__content__logo"></div>
+          <div class="footer__content__address">
+            2972 Westheimer Rd. Santa Ana, Illinois 85486
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Team</a>
+          <a href="#" class="footer__link">Services</a>
+          <a href="#" class="footer__link">About us</a>
+          <a href="#" class="footer__link">Press</a>
+          <a href="#" class="footer__link">Projects</a>
+          <a href="#" class="footer__link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/index.js"></script>
+</body>
+
 </html>
