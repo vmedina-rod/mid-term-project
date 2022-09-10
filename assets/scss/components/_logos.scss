@@ -1,0 +1,23 @@
+.grid {
+  &__logos {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    @include respond-max($md) {
+      justify-items: center;
+      @include ai-flex-center;
+      grid-column-gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    @include respond-max($xs) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+}

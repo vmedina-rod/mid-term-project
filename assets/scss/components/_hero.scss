@@ -1,0 +1,100 @@
+.hero {
+  &__content {
+    max-width: 530px;
+    margin-top: 100px;
+
+    @include respond-max($md) {
+      @include display-flex;
+      @include flex-direction-col;
+      @include ai-flex-center;
+      max-width: 700px;
+      margin-top: 0px;
+      align-self: center;
+    }
+  }
+  &__image {
+    position: relative;
+    @include respond-max($md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__heading {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+
+    @include respond-max($md) {
+      text-align: center;
+    }
+
+    @include respond-max($sm) {
+      font-size: 40px;
+    }
+
+    @include respond-max($xs) {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    max-width: 435px;
+    margin-bottom: 40px;
+    color: $neutralMedium;
+    font-size: 20px;
+    line-height: 151%;
+
+    @include respond-max($md) {
+      max-width: 600px;
+      text-align: center;
+    }
+
+    @include respond-max($sm) {
+      font-size: 17px;
+    }
+  }
+
+  &__buttons {
+    @include respond-max($md) {
+      @include display-flex;
+      @include jc-flex-center;
+      @include ai-flex-center;
+    }
+
+    @include respond-max($xs) {
+      @include flex-direction-col;
+    }
+  }
+
+  &__textbutton {
+    color: $neutralMedium;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &__card {
+    &-1 {
+      position: absolute;
+      left: -19%;
+      top: -2%;
+      right: auto;
+      bottom: auto;
+      @include respond-max($sm) {
+        display: none;
+      }
+    }
+    &-2 {
+      position: absolute;
+      left: auto;
+      top: auto;
+      right: -19%;
+      bottom: -22%;
+      @include respond-max($sm) {
+        display: none;
+      }
+    }
+  }
+}

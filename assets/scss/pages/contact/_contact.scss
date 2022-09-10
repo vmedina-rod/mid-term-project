@@ -1,0 +1,78 @@
+.contact-us-section {
+  margin-top: 10rem;
+
+  @include respond-max($md){
+    padding: 0 2rem;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+
+    @include respond-max($md) {
+      text-align: center;
+    }
+
+    @include respond-max($sm) {
+      font-size: 40px;
+    }
+
+    @include respond-max($xs) {
+      font-size: 30px;
+    }
+  }
+
+  label {
+    color: $neutralMedium;
+  }
+
+  &__email-phone {
+    @include display-flex;
+    @include jc-space-between;
+    width: 100%;
+
+    @include respond-max($sm) {
+      @include flex-direction-col;
+    }
+
+    div {
+      width: 48%;
+      @include respond-max($sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__submit-button {
+    width: 100%;
+    border-style: none;
+    height: 5rem;
+    font-size: 12pt;
+    //background-color: $primary;
+    //color: $white;
+  }
+
+  input,
+  textarea {
+    color: $neutralMedium;
+    background-color: $inputForm;
+    @include display-flex;
+    @include flex-direction-col;
+    width: 100%;
+    height: 2rem;
+    padding: 2rem;
+    border-style: none;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 10rem;
+    text-decoration: none;
+    &::placeholder {
+      font-family: $font-family-roboto;
+    }
+  }
+}

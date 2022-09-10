@@ -1,0 +1,67 @@
+//Colors
+
+$black: #000;
+$white: #fff;
+$primary: #072ac8;
+$accent: #43d2ff;
+$primaryHover: #a2d6f9;
+$primaryTapped: #d1edff;
+$neutralDark: #292e47;
+$neutralMedium: #6b708d;
+$neutralLight: #f4f6fc;
+$neutralLightBlue: #ecf7ff;
+$secondary: #ffc600;
+$red: red;
+$invalid: #ad3d3d;
+$inputForm: #6b708d1a;
+
+//Fonts
+
+$font-size-xxs: 11.6px;
+$font-size-xs: 13px;
+$font-size-s: 17px;
+$font-size-m: 20px;
+$font-size-l: 24px;
+$font-size-xl: 40px;
+$font-size-xxl: 60px;
+$font-family-poppins: "Poppins", sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
+
+//Sizes
+
+$xs: 479;
+$sm: 767;
+$md: 991;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "xs": screen and
+    (
+      min-width: 572px,
+    ),
+  "sm": screen and
+    (
+      min-width: 768px,
+    ),
+  "md": screen and
+    (
+      min-width: 1024px,
+    ),
+  "lg": screen and
+    (
+      min-width: 1280px,
+    ),
+  "xl": screen and
+    (
+      min-width: 1440px,
+    ),
+  "xxl": screen and
+    (
+      min-width: 1920px,
+    ),
+) !default;
+
+

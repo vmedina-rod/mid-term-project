@@ -1,0 +1,221 @@
+.container {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &.hero {
+    @include display-flex;
+    @include jc-flex-center;
+
+    @include respond-max($md) {
+      @include flex-direction-col;
+      @include ai-flex-center;
+    }
+  }
+
+  &.projects {
+    @include display-flex;
+    @include flex-direction-col;
+    @include jc-space-between;
+  }
+
+  &.testimonial {
+    @include display-flex;
+    @include flex-direction-col;
+    @include jc-space-around;
+    @include ai-flex-center;
+    height: 100%;
+
+    @include respond-max($sm) {
+      @include jc-flex-center;
+    }
+  }
+
+  &.footer {
+    @include display-flex;
+    @include jc-space-between;
+    @include respond-max($sm) {
+      @include flex-direction-col;
+      @include ai-flex-center;
+    }
+  }
+
+  &.project {
+    @include display-flex;
+    @include flex-direction-col;
+  }
+}
+
+.primary-button {
+  display: none;
+  padding: 15px 30px;
+  background-color: $primary;
+  font-family: $font-family-roboto;
+  font-size: 17px;
+
+  @include respond-to(md) {
+    display: inline-block;
+  }
+
+  &.hero {
+    margin-right: 40px;
+    display: inline-block;
+    @include respond-max($xs) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.contact {
+    height: 80px;
+    display: block;
+  }
+}
+
+.button {
+  color: $white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.section {
+  margin-top: 200px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  @include respond-max($xs) {
+    margin-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  &.hero {
+    margin-top: 100px;
+
+    @include respond-max($md) {
+      margin-top: 50px;
+    }
+  }
+
+  &.logos {
+    margin-top: 130px;
+    @include respond-max($sm) {
+      margin-top: 0px;
+    }
+  }
+
+  &.testimonial {
+    position: relative;
+    height: 622px;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $neutralDark;
+    background-image: url("../images/testimonial-section/orbit.png");
+    background-position: 0px 0px;
+    background-size: contain;
+
+    @include respond-max($md) {
+      margin-top: 100px;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @include respond-max($xs) {
+      height: 522px;
+    }
+  }
+
+  &.section.contact,
+  .section.services {
+    @include respond-max($md) {
+      margin-top: 100px;
+    }
+  }
+
+  &.project {
+    margin-top: 70px;
+  }
+
+  &.other-projects {
+    margin-top: 70px;
+  }
+
+  &.footer {
+    padding-bottom: 100px;
+    @include respond-max($md) {
+      margin-top: 100px;
+    }
+  }
+}
+
+.link-button {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  color: $primary;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.heading {
+  font-size: 60px;
+}
+
+.text-block {
+  color: $neutralMedium;
+  font-size: 20px;
+  @include respond-max($sm) {
+    display: block;
+    height: 20px;
+  }
+}
+
+.logo {
+  filter: grayscale(100%);
+  transition: filter 200ms ease;
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.submitted-message {
+  @include display-flex;
+  @include jc-flex-center;
+  @include ai-flex-center;
+  opacity: 0;
+  transition: opacity 1s;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  text-align: center;
+
+  &.fade {
+    opacity: 1;
+    display: block;
+    border: 1px solid green;
+    background: palegreen;
+    margin: 1rem;
+    width: 85vw;
+  }
+}
+
+.invalid-input {
+  box-shadow: 0 0 20px $invalid;
+  transition: border-width 0.4s ease-out;
+}
+
+.error::before {
+  content: "Not valid ";
+  position: absolute;
+  top: -4px;
+  color: $red;
+}
+
+.error input {
+  border-color: $red;
+}

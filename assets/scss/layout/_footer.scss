@@ -1,0 +1,51 @@
+.footer {
+  &__content {
+    @include display-flex;
+    max-width: 260px;
+    @include flex-direction-col;
+  }
+  &__links {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    @include respond-max($xs) {
+      grid-template-columns: 1fr;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    color: $neutralMedium;
+    font-size: 17px;
+    text-decoration: none;
+  }
+
+  &__content {
+    @include respond-max($sm) {
+      margin-bottom: 30px;
+      @include ai-flex-center;
+    }
+
+    &__logo {
+      width: 100px;
+      height: 30px;
+      margin-bottom: 30px;
+      background-image: url("../images/logos/circle.svg");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &__address {
+      color: $neutralMedium;
+      font-size: 17px;
+      line-height: 150%;
+      @include respond-max($sm) {
+        text-align: center;
+      }
+    }
+  }
+}

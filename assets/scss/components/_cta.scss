@@ -1,0 +1,73 @@
+.cta-section {
+  background-color: $secondary;
+  @include display-flex;
+  @include flex-direction-col;
+  justify-content: center;
+  align-items: center;
+  min-height: 30rem;
+  margin: 10rem 0;
+
+  @include respond-max($sm) {
+    @include display-flex;
+    @include flex-direction-col;
+  }
+
+  h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: $black;
+    margin: 1em 0;
+    line-height: 47px;
+    @include respond-max($sm) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__mail {
+    margin-top: 3rem;
+    width: auto;
+    @include respond-max($sm) {
+      @include display-flex;
+      @include flex-direction-col;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    &-input {
+      background: url("./../images/newsletter/icon/mail.svg") no-repeat 30px;
+      background-color: $white;
+      padding: 1.75rem 5rem;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+
+      @include respond-max($sm) {
+        background: url("./../images/newsletter/icon/mail.svg") no-repeat 10px;
+        background-color: $white;
+        background-size: 15px;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
+  &__subscribe-button {
+    border: none;
+    padding: 1.75rem 5rem;
+    margin-left: 20px;
+    background-color: $primary;
+    color: $white;
+    cursor: pointer;
+    @include respond-max($sm) {
+      padding: 1rem 2rem;
+      margin: 0;
+      margin-top: 1rem;
+    }
+  }
+}

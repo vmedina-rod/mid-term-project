@@ -1,0 +1,194 @@
+.projects {
+  &__heading {
+    font-size: 40px;
+    @include respond-max($sm) {
+      font-size: 30px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    margin-top: 70px;
+    @include jc-space-between;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .project {
+    &__card {
+      @include display-flex;
+      height: 444px;
+      //max-width: 340px;
+      @include flex-direction-col;
+      flex: 1;
+      background-color: $white;
+      transition: box-shadow 200ms ease;
+
+      @include respond-max($sm) {
+        max-width: 100%;
+      }
+
+      &:hover {
+        box-shadow: 0 25px 50px 0 rgba(107, 112, 141, 0.1);
+      }
+
+      &_image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      @include display-flex;
+      height: 100%;
+      @include flex-direction-col;
+      @include jc-space-between;
+    }
+
+    &__text {
+      @include display-flex;
+      @include flex-direction-col;
+    }
+
+    &__title {
+      margin: 30px 30px 20px;
+      font-size: 24px;
+      line-height: 150%;
+      font-weight: 500;
+    }
+
+    &__description {
+      margin: 0px 30px 40px;
+      color: $neutralMedium;
+      font-size: 17px;
+      line-height: 150%;
+      font-weight: 400;
+      @include respond-max($md) {
+        margin-bottom: 10px;
+      }
+      @include respond-max($sm) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .collection {
+    &-list {
+      display: -ms-grid;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 16px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+
+      @include respond-max($sm) {
+        @include ai-flex-center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+      }
+
+      &-wrapper {
+        margin-top: 70px;
+        @include respond-max($sm) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+.project {
+  &-type-wrapper {
+    @include display-flex;
+    @include jc-space-between;
+    @include flex-direction-row;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    @include respond-max($sm) {
+      position: static;
+      @include flex-direction-col;
+    }
+  }
+
+  &-page {
+    &__type {
+      color: $neutralMedium;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &__image {
+      width: 100%;
+      height: 444px;
+      object-fit: cover;
+
+      &__effect {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: auto;
+        bottom: auto;
+        z-index: -1;
+        width: 100%;
+        height: 444px;
+        opacity: 0.4;
+        filter: saturate(200%) blur(40px);
+        transform: translate(0px, 14px);
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__image__wrapper {
+    position: relative;
+  }
+
+  &__completion {
+    @include display-flex;
+    @include respond-max($sm) {
+      @include display-flex;
+      @include jc-flex-start;
+      @include flex-nowrap;
+      overflow: visible;
+      align-self: flex-start;
+      flex: 0 auto;
+      object-fit: fill;
+      padding-top: 1em;
+    }
+    @include respond-max($xs) {
+      @include flex-direction-row;
+    }
+  }
+
+  &__completed {
+    margin-right: 5px;
+    color: $neutralDark;
+    font-size: 20px;
+
+    @include respond-max($sm) {
+      display: block;
+      overflow: visible;
+      height: 20px;
+      @include flex-direction-row;
+      flex: 0 auto;
+      object-fit: fill;
+    }
+  }
+
+  &__details {
+    margin-top: 70px;
+    color: $neutralMedium;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include respond-max($sm) {
+      margin-top: 20px;
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+/*-------------------MIXINS-------------------------*/
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+
+/* ------------------- FLEXBOX ------------------*/
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  @mixin flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  @mixin flex-nowrap {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  @mixin display-inline-flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  @mixin jc-flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  @mixin jc-flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  @mixin jc-space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  @mixin jc-space-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  @mixin jc-space-evenly {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+
+  @mixin jc-flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  @mixin ai-flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  @mixin ai-flex-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  @mixin ai-flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  @mixin ai-space-between {
+    -webkit-box-align: space-between;
+    -ms-flex-align: space-between;
+    align-items: space-between;
+  }
+
+  @mixin ai-space-around {
+    -webkit-box-align: space-around;
+    -ms-flex-align: space-around;
+    align-items: space-around;
+  }
+
+  @mixin ai-stretch {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  @mixin ac-flex-center {
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  @mixin ac-flex-start {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+
+  @mixin ac-flex-end {
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+
+  @mixin ac-space-around {
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  @mixin ac-space-between {
+    -ms-flex-line-pack: space-between;
+    align-content: space-between;
+  }
+
+  @mixin flex($prop) {
+    -webkit-box-flex: $prop;
+    -ms-flex: $prop;
+    flex: $prop;
+  }
+
+  @mixin flex-order($prop) {
+    -webkit-box-ordinal-group: $prop;
+    -moz-box-ordinal-group: $prop;
+    -ms-flex-order: $prop;
+    -webkit-order: $prop;
+    order: $prop;
+  }
+
+  @mixin flex-direction-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  @mixin flex-direction-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+/*--------------------BREAKPOINTS------------------*/
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  //// If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    //  // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  //// If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      +"Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin respond-min($min) {
+  @media screen and (min-width: $min+px) {
+    @content;
+  }
+}
+
+@mixin respond-min-max($min, $max) {
+  @media screen and (min-width: $min+px) and (max-width: $max+px) {
+    @content;
+  }
+}
+
+@mixin respond-max($max) {
+  @media screen and (max-width: $max+px) {
+    @content;
+  }
+}

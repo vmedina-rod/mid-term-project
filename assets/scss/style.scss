@@ -1,0 +1,28 @@
+//Utils
+@import "utils/variables";
+@import "utils/fonts";
+@import "utils/mixins";
+
+//Base
+@import "base/reset";
+@import "base/general";
+
+//Layout
+@import "layout/header";
+@import "layout/footer";
+
+//Components
+@import "components/hero";
+@import "components/logos";
+@import "components/project";
+@import "components/testimonial";
+@import "components/services";
+@import "components/cta";
+
+//Pages
+
+@import "pages/contact/contact";
+
+@import "../../node_modules/animate.css/animate.css";
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/aos/dist/aos.css";
