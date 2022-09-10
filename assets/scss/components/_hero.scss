@@ -32,10 +32,12 @@
 
     @include respond-max($sm) {
       font-size: 40px;
+      line-height: 40px;
     }
 
     @include respond-max($xs) {
       font-size: 30px;
+      line-height: 30px;
     }
   }
 
