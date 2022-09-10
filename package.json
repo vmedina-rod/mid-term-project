@@ -35,6 +35,8 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "gulp-connect": "^5.7.0",
+    "gulp-open": "^3.0.1",
     "gulp-cli": "^2.3.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.54.8"

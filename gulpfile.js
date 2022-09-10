@@ -1,17 +1,40 @@
 "use strict";
 
+const { watch, series, parallel, src, dest } = require('gulp');
 var uglify = require("gulp-uglify");
 
 //const sass = require("gulp-sass");
-const sass = require('gulp-sass')(require('sass'));
-
+const sass = require("gulp-sass")(require("sass"));
+const connect = require('gulp-connect'); // Runs a local webserver
+const open = require('gulp-open'); // Opens a URL in a web browser
 
 var gulp = require("gulp"),
-
   sourcemaps = require("gulp-sourcemaps"),
   concat = require("gulp-concat"),
   cleanCSS = require("gulp-clean-css"),
   replace = require("gulp-replace");
+
+// Launch Chrome web browser
+// https://www.npmjs.com/package/gulp-open
+gulp.task("openBrowser", function openBrowser(done) {
+  var options = {
+  uri: 'http://localhost:8080'
+  };
+  return src('./')
+  .pipe(open(options));
+  done();
+});
+
+// Gulp plugin to run a webserver (with LiveReload)
+// https://www.npmjs.com/package/gulp-connect
+gulp.task("server", function server(done) {
+  return connect.server({
+  root: './',
+  port: 8080,
+  debug: true,
+  });
+  done();
+});
 
 gulp.task("sass", function () {
   return gulp
