@@ -17,6 +17,11 @@
     @include respond-max($md) {
       margin-top: 40px;
     }
+
+    img{
+      max-width: 100%;
+      vertical-align: middle;
+    }
   }
 
   &__heading {
