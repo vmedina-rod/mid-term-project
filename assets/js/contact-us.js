@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    const sr = ScrollReveal({
+        origin: "top",
+        distance: "60px",
+        duration: 2500,
+        delay: 400,
+    });
+
+    sr.reveal(`footer`);
+    sr.reveal(`.navbar__logo, .nav__link`, { interval: 100 });
+    sr.reveal(`.contact-us-section__title, label, input, textarea, button`, { interval: 300 });
+
+
+
     const CONTACT_API_BASE_URL = "https://database.deta.sh/v1/a0wwnrex/contactmessages/items";
     const X_API_KEY = "a0wwnrex_JeRhBybn5iFYziStv9d2M6Mchd2b4B4H";
 
@@ -37,14 +50,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         };
 
      fetch(CONTACT_API_BASE_URL, fetchParams)
-/*                 .then(response => {
-                    if (response.ok) return response.json();
-
-                })
-                .then(json => {
-                    console.log(json);
-                }) */
-
           .then(async (response) => {
                 if (response.status === 201) {
                     hideForm();
@@ -155,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     window.addEventListener("load", function () {
         var sendFormButton = document.querySelector(".contact-us-section__submit-button");
-        //console.log("sendFormButton", sendFormButton);
 
         if (sendFormButton) {
             sendFormButton.addEventListener("click", sendForm);
