@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     sr.reveal(`footer`);
+    sr.reveal(`.primary-button, .button`, { interval: 300 });
     sr.reveal(`.navbar__logo, .nav__link`, { interval: 100 });
     sr.reveal(`.contact-us-section__title, label, input, textarea, button`, { interval: 300 });
 

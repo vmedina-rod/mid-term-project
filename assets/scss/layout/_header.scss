@@ -62,7 +62,10 @@
         margin-right: auto;
 
         &.current {
-          color: #072ac8;
+          color: $primary;
+        }
+        &:hover, &:focus, &:active {
+          color: $primary;
         }
       }
     }
