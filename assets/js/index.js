@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   sr.reveal(`footer`);
   sr.reveal(`.hero__heading, .hero__description, .hero__buttons, .primary-button, .button, .testimonial__heading, .testimonial__text, .client__profile, .client__info`, { interval: 300 });
   sr.reveal(`.hero__image__main`, { delay: 700, origin: "bottom" });
-  sr.reveal(`.navbar__logo, .nav__link, .client__logo, .project__card, .service__card`, { interval: 100 });
+  sr.reveal(`.navbar__logo, .nav__link, .client__logo, .project__card, .service__card, .footer__link`, { interval: 100 });
   sr.reveal(`.hero__card-1`, { origin: "left" });
   sr.reveal(`.hero__card-2`, { origin: "right" });
   sr.reveal(`.projects__heading`, { origin: "top" });
